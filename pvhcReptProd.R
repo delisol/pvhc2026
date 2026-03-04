@@ -3,13 +3,13 @@
 # stores in appropriate Drive directory
 
 # pass report date values
-filterDte <- '2026-01-31' #last day of report period
+filterDte <- '2026-02-28' #last day of report period
 fy_start <- '2026-01-01'
-curr_mo_start <- '2026-01-01'
+curr_mo_start <- '2026-02-01'
 fy_to_date <- filterDte
 reptDte <- format(as.Date(fy_to_date), '%B %d, %Y')
-currM <- 'Jan' # month of report
-nextM <- 'Feb' # change to next month after report date
+currM <- 'Feb' # month of report
+nextM <- 'Mar' # change to next month after report date
 
 startDateSubTitle <- 'January 1, 2024'
 
@@ -29,16 +29,3 @@ psycModel::html_to_pdf(
   ),
   scale = .88
 )
-
-# zip::zip(sprintf('C:\\Users\\dsole\\OneDrive\\Documents\\FinancialPlanning\\PVHC financials\\2023\\%s.zip' , reptDte) ,
-#          files = c(
-#            sprintf('C:\\Users\\dsole\\OneDrive\\Documents\\FinancialPlanning\\PVHC financials\\2024\\PVHC Monthly Report for %s.html' , reptDte)) ,
-#          mode = 'cherry-pick' ,
-#          include_directories = FALSE)
-
-# zip::zip(sprintf('C:\\Users\\dsole\\OneDrive\\Documents\\FinancialPlanning\\PVHC financials\\2023\\%s.zip' , reptDte) ,
-#             files = c(
-#               sprintf('C:\\Users\\dsole\\OneDrive\\Documents\\FinancialPlanning\\PVHC financials\\2023\\PVHC Monthly Report for %s.html' , reptDte) ,
-#               sprintf('C:\\Users\\dsole\\OneDrive\\Documents\\FinancialPlanning\\PVHC financials\\2023\\PVHC Monthly Report for %s.pdf' , reptDte)) ,
-#          mode = 'cherry-pick' ,
-#          include_directories = FALSE)
